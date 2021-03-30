@@ -2,7 +2,7 @@
  * 
  * @author laurenbockelman
  * 
- *         Admin Class for EASE Application
+ *         User Class for EASE Application
  * 
  *         Copyright (C) 2021 bockellt@maimoh.edu
  *
