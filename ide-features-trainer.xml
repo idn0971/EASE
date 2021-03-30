@@ -1,0 +1,88 @@
+<application>
+  <component name="LangManager">
+    <option name="languageName" value="JAVA" />
+  </component>
+  <component name="LessonStateBase">
+    <option name="myMap">
+      <map>
+        <entry key="CodeAssistance.CodeFormatting" value="PASSED" />
+        <entry key="CodeAssistance.EditorCodingAssistance" value="NOT_PASSED" />
+        <entry key="CodeAssistance.ParameterInfo" value="PASSED" />
+        <entry key="CodeAssistance.QuickPopups" value="PASSED" />
+        <entry key="Completions.BasicCompletion" value="NOT_PASSED" />
+        <entry key="Completions.CompletionwithTab" value="NOT_PASSED" />
+        <entry key="Completions.SmartTypeCompletion" value="NOT_PASSED" />
+        <entry key="Completions.StatementCompletion" value="NOT_PASSED" />
+        <entry key="EditorBasics.Collapse" value="NOT_PASSED" />
+        <entry key="EditorBasics.CommentLine" value="NOT_PASSED" />
+        <entry key="EditorBasics.DeleteLine" value="NOT_PASSED" />
+        <entry key="EditorBasics.Duplicate" value="NOT_PASSED" />
+        <entry key="EditorBasics.Move" value="NOT_PASSED" />
+        <entry key="EditorBasics.MultipleSelections" value="NOT_PASSED" />
+        <entry key="EditorBasics.Selection" value="NOT_PASSED" />
+        <entry key="Navigation.Declaration/Implementation" value="NOT_PASSED" />
+        <entry key="Navigation.FileStructure" value="NOT_PASSED" />
+        <entry key="Navigation.JumptoSource" value="NOT_PASSED" />
+        <entry key="Navigation.Next/PreviousOccurrences" value="NOT_PASSED" />
+        <entry key="Refactorings.ExtractMethod" value="NOT_PASSED" />
+        <entry key="Refactorings.ExtractVariable/Field" value="NOT_PASSED" />
+        <entry key="Refactorings.RefactoringBasics" value="NOT_PASSED" />
+        <entry key="Refactorings.Rename" value="NOT_PASSED" />
+      </map>
+    </option>
+  </component>
+  <component name="StatisticBase">
+    <option name="persistedLessonId2State">
+      <map>
+        <entry key="CodeAssistance.CodeFormatting">
+          <value>
+            <StatisticData>
+              <option name="state" value="PASSED" />
+              <option name="timestamp" value="24935" />
+            </StatisticData>
+          </value>
+        </entry>
+        <entry key="CodeAssistance.EditorCodingAssistance">
+          <value>
+            <StatisticData>
+              <option name="state" value="STARTED" />
+              <option name="timestamp" value="1536255287071" />
+            </StatisticData>
+          </value>
+        </entry>
+        <entry key="CodeAssistance.ParameterInfo">
+          <value>
+            <StatisticData>
+              <option name="state" value="PASSED" />
+              <option name="timestamp" value="20957" />
+            </StatisticData>
+          </value>
+        </entry>
+        <entry key="CodeAssistance.QuickPopups">
+          <value>
+            <StatisticData>
+              <option name="state" value="PASSED" />
+              <option name="timestamp" value="11102" />
+            </StatisticData>
+          </value>
+        </entry>
+        <entry key="EditorBasics.Selection">
+          <value>
+            <StatisticData>
+              <option name="state" value="STARTED" />
+              <option name="timestamp" value="1536253746019" />
+            </StatisticData>
+          </value>
+        </entry>
+        <entry key="Navigation.JumptoSource">
+          <value>
+            <StatisticData>
+              <option name="state" value="STARTED" />
+              <option name="timestamp" value="1536255347294" />
+            </StatisticData>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</application>
