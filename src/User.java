@@ -10,7 +10,7 @@
 public class User {
 	// instance variables
 	private String firstName, lastName, userName, password;
-	private boolean isAdmin;
+	private boolean isAdmin, access, verify;
 
 	// Assigns instance variables to null and isAdmin to false.
 	User() {
@@ -79,7 +79,49 @@ public class User {
 		return isAdmin;
 	}
 	
+	public void setAccess(boolean access) {
+		this.access = access;
+	}
+	
+	public boolean getAccess() {
+		return access;
+	}
+	/**
+	 * this may get moved to an admin class
+	 * @param verify
+	 */
+	public void setVerify(boolean verify) {
+		this.verify = verify;
+	}
+	
+	public boolean getVerify() {
+		return verify;
+	}
+	
 	// checks if its a user or admin. if admin then has access to request page
+	/**
+	 * adminAccess() {
+	 * if (this.isAdmin == true) {
+	 * this.access == true;
+	 * --- send to request page ---
+	 * } else {
+	 * --- send user to waiting page ---
+	 * } 
+	 * } 
+	 */
+	
+	// Admin verify requests
+	//may be mopved to Admin class
+	/**
+	 * verify() {
+	 * if (application fits requirements to be verified) {
+	 * verify == true;
+	 * --- send user out of waiting page to verfication page ---
+	 * } else {
+	 * verfiy == false;
+	 * --- send user to denieed page ---
+	 * } 
+	 */
 
 	
 
