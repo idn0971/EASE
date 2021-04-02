@@ -1,0 +1,8 @@
+Private void jButtonActionPerformed(java.awt.event.ActionEvent evt) {
+  applicationRequestPage();
+  close();
+  }
+  
+public void close() {
+  System.exit(0);
+  }
