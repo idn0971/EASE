@@ -99,30 +99,15 @@ public class User {
 	}
 	
 	// checks if its a user or admin. if admin then has access to request page
-	/**
-	 * adminAccess() {
-	 * if (this.isAdmin == true) {
-	 * this.access == true;
-	 * --- send to request page ---
-	 * } else {
-	 * --- send user to waiting page ---
-	 * } 
-	 * } 
-	 */
-	
-	// Admin verify requests
-	//may be mopved to Admin class
-	/**
-	 * verify() {
-	 * if (application fits requirements to be verified) {
-	 * verify == true;
-	 * --- send user out of waiting page to verfication page ---
-	 * } else {
-	 * verfiy == false;
-	 * --- send user to denieed page ---
-	 * } 
-	 */
 
-	
-
+	private void adminAccess() {
+		if (this.isAdmin == true) {
+			this.access = true;
+			// --- send to request page ---
+			Admin ad = new Admin();
+		} else {
+			// --- send user to waiting page ---
+			// Wait wait = new Wait();
+		}
+	}
 }
