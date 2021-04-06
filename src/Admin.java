@@ -11,8 +11,6 @@ import javax.swing.WindowConstants;
 import javax.swing.border.TitledBorder;
 
 public class Admin implements ActionListener {
-	// instance vaiables
-	private boolean verify;
 
 	public Admin() {
 		JFrame frame = new JFrame("Admin");
@@ -50,29 +48,17 @@ public class Admin implements ActionListener {
 	}
 
 	/**
-	 * getter and setter for verify
-	 * 
-	 * @param verify
-	 */
-	public void setVerify(boolean verify) {
-		this.verify = verify;
-	}
-
-	public boolean getVerify() {
-		return verify;
-	}
-
-	/**
 	 * Tells the code what to do with the action listeners (approve and deny
 	 * buttons) approve -- switch isVerified to true deny --- delete application
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		Application app = new Application();
 		if (e.getActionCommand().equals("Approve")) {
-			this.verify = true;
+			 app.setVerified(true);
 			// --- send user out of waiting page to verfication page ---
 		} else if (e.getActionCommand().equals("Deny")) {
-			this.verify = false;
+			 app.setVerified(false);
 		}
 	}
 
