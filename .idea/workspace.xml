@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="101ebfbf-6596-47b0-9e62-30b0570b7685" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/ApplicationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EASEApplication.eml" beforeDir="false" afterPath="$PROJECT_DIR$/EASEApplication.eml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/UserTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,27 +30,27 @@
         <counts>
           <entry key="classpath" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="java" value="12" />
+          <entry key="java" value="15" />
           <entry key="project" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Eclipse" value="2" />
-          <entry key="JAVA" value="12" />
+          <entry key="JAVA" value="15" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="505" />
-          <entry key="txt" value="55" />
+          <entry key="java" value="659" />
+          <entry key="txt" value="97" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="505" />
-          <entry key="PLAIN_TEXT" value="55" />
+          <entry key="JAVA" value="659" />
+          <entry key="PLAIN_TEXT" value="97" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -85,32 +82,54 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Admin.java">
+        <entry file="file://$PROJECT_DIR$/src/main/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-221">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            <state>
+              <caret selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Application.java">
+        <entry file="file://$PROJECT_DIR$/src/test/ApplicationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="37" />
+            <state relative-caret-position="248">
+              <caret line="70" column="9" lean-forward="true" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1897#1919#0" expanded="true" />
+                <element signature="e#1920#1928#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-920">
+              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/ApplicationTest.java">
+        <entry file="file://$PROJECT_DIR$/src/test/UserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="83" column="21" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1897#1919#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="102">
+              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="10" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Wait.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -132,7 +151,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/EASE.java" />
         <option value="$PROJECT_DIR$/src/ApplicationTest.java" />
+        <option value="$PROJECT_DIR$/src/main/Application.java" />
         <option value="$PROJECT_DIR$/src/test/ApplicationTest.java" />
+        <option value="$PROJECT_DIR$/src/test/UserTest.java" />
       </list>
     </option>
   </component>
@@ -147,6 +168,9 @@
     <option name="y" value="-45" />
     <option name="width" value="2210" />
     <option name="height" value="2075" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -169,11 +193,6 @@
               <item name="EASE" type="b2602c69:ProjectViewProjectNode" />
               <item name="EASE" type="462c0819:PsiDirectoryNode" />
               <item name=".settings" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EASE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EASE" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EASE" type="b2602c69:ProjectViewProjectNode" />
@@ -233,7 +252,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ApplicationTest (1)">
+  <component name="RunManager" selected="JUnit.UserTest">
     <configuration name="ApplicationTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="EASEApplication" />
       <option name="PACKAGE_NAME" value="" />
@@ -268,31 +287,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApplicationTest.getAndSetRating" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="EASEApplication" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ApplicationTest" />
-      <option name="METHOD_NAME" value="getAndSetRating" />
+      <option name="MAIN_CLASS_NAME" value="UserTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.setAndGetFirstName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="EASEApplication" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserTest" />
+      <option name="METHOD_NAME" value="setAndGetFirstName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApplicationTest.getRating" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserTest.setLastName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="EASEApplication" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ApplicationTest" />
-      <option name="METHOD_NAME" value="getRating" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ApplicationTest.isAndSetVerified" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="EASEApplication" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ApplicationTest" />
-      <option name="METHOD_NAME" value="isAndSetVerified" />
+      <option name="MAIN_CLASS_NAME" value="UserTest" />
+      <option name="METHOD_NAME" value="setLastName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -300,19 +317,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.ApplicationTest" />
-      <item itemvalue="JUnit.ApplicationTest.getRating" />
-      <item itemvalue="JUnit.ApplicationTest.getAndSetRating" />
-      <item itemvalue="JUnit.ApplicationTest.isAndSetVerified" />
       <item itemvalue="JUnit.ApplicationTest.getAndSetPlatformNversion" />
       <item itemvalue="JUnit.ApplicationTest (1)" />
+      <item itemvalue="JUnit.UserTest.setAndGetFirstName" />
+      <item itemvalue="JUnit.UserTest.setLastName" />
+      <item itemvalue="JUnit.UserTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserTest" />
+        <item itemvalue="JUnit.UserTest.setLastName" />
+        <item itemvalue="JUnit.UserTest.setAndGetFirstName" />
         <item itemvalue="JUnit.ApplicationTest (1)" />
         <item itemvalue="JUnit.ApplicationTest.getAndSetPlatformNversion" />
-        <item itemvalue="JUnit.ApplicationTest.isAndSetVerified" />
-        <item itemvalue="JUnit.ApplicationTest.getAndSetRating" />
-        <item itemvalue="JUnit.ApplicationTest.getRating" />
       </list>
     </recent_temporary>
   </component>
@@ -334,16 +351,17 @@
       <option name="project" value="LOCAL" />
       <updated>1617913005216</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Unit test for application class">
+      <created>1617914554997</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1617914554997</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ApplicationTest_(1) - 2021.04.08 at 16h 28m 25s.xml">
-      <configuration name="ApplicationTest (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ApplicationTest_getAndSetUserAdded - 2021.04.08 at 16h 29m 10s.xml">
-      <configuration name="ApplicationTest.getAndSetUserAdded" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ApplicationTest_getAndSetDateAdded - 2021.04.08 at 16h 29m 54s.xml">
       <configuration name="ApplicationTest.getAndSetDateAdded" configurationId="JUnit" />
     </history-entry>
@@ -368,12 +386,18 @@
     <history-entry file="ApplicationTest_isAndSetVerified - 2021.04.08 at 16h 33m 51s.xml">
       <configuration name="ApplicationTest.isAndSetVerified" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ApplicationTest_getAndSetPlatformNversion - 2021.04.08 at 16h 41m 54s.xml">
+      <configuration name="ApplicationTest.getAndSetPlatformNversion" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApplicationTest_(1) - 2021.04.08 at 16h 42m 01s.xml">
+      <configuration name="ApplicationTest (1)" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30985916" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30985916" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
@@ -388,8 +412,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32956153" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32956153" />
+      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32956153" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32956153" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -429,7 +453,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changed file storage for better testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed file storage for better testing" />
+    <MESSAGE value="Added Unit test for application class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Unit test for application class" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/EASE.java">
@@ -473,20 +498,6 @@
     <entry file="file://$PROJECT_DIR$/.project">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/AddApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.classpath">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -506,19 +517,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="37" />
+        <state>
+          <caret selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/ApplicationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="83" column="21" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
+        <state relative-caret-position="248">
+          <caret line="70" column="9" lean-forward="true" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1897#1919#0" expanded="true" />
+            <element signature="e#1920#1928#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Wait.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Admin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="57" column="35" lean-forward="true" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/AddApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-920">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/UserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="10" selection-end-column="49" />
         </state>
       </provider>
     </entry>
