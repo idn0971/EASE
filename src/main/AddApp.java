@@ -27,55 +27,28 @@ public class AddApp {
 		
 		JPanel panel = new JPanel();
 		panel.setBorder(new TitledBorder("Application to add an app"));
-		panel.setLayout(new GridLayout(7,2));
+		panel.setLayout(new GridLayout(10,2));
 		
-		JLabel user = new JLabel("Who is adding this?");
+		JLabel name = new JLabel("Name of Application");
+		JLabel date = new JLabel("Date added");
+		JLabel user = new JLabel("Who added it?");
+		JLabel des = new JLabel("Description");
+		JLabel comp = new JLabel("What company is adding this?");
+		JLabel link = new JLabel("Link to application");
+		JLabel price = new JLabel("Price of application");
+		panel.add(name);
+		panel.add(date);
 		panel.add(user);
-		JTextField username = new JTextField("Enter text here", 50);
-		panel.add(username);
+		panel.add(des);
+		panel.add(comp);
+		panel.add(link);
+		panel.add(price);
+		//JTextField name1 = new JTextField("Name", 10);
+		//panel.add(name1);
 		
-//		JLabel pass = new JLabel("Date it is being added");
-//		panel.add(pass);
-//		JTextField password = new JTextField("Today's Date", 10);
-//		panel.add(password);
-//		
-//		JLabel appname = new JLabel("Name of the app");
-//		panel.add(appname);
-//		JTextField name = new JTextField("name", 50);
-//		panel.add(name);
-//		
-//		JLabel des = new JLabel("Brief Description");
-//		panel.add(des);
-//		JTextField des2 = new JTextField("Description", 100);
-//		panel.add(des2);
-//		
-//		JLabel company = new JLabel("Name of Company");
-//		panel.add(company);
-//		JTextField comp = new JTextField("Company", 50);
-//		panel.add(comp);
-//		
-//		JLabel link = new JLabel("Enter the link to the Application");
-//		panel.add(link);
-//		JTextField link1 = new JTextField("Link", 100);
-//		panel.add(link1);
-//		
-//		JLabel price = new JLabel("Price of the app");
-//		panel.add(price);
-//		JTextField pric = new JTextField("Price", 100);
-//		panel.add(pric);
-//		
+		
+		
 		frame.add(panel, BorderLayout.CENTER);
-		
-//		JPanel buttons = new JPanel();
-//		buttons.setLayout(new GridLayout(1,2));
-//		JButton sub = new JButton("Submit");
-//		JButton canc = new JButton("Cancel");
-//		
-//		buttons.add(sub);
-//		buttons.add(canc);
-//		frame.add(buttons, BorderLayout.SOUTH);
-		
-		
 	}
 
 }
