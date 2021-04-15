@@ -1,10 +1,14 @@
-import org.junit.jupiter.api.Test;
+package test;
+
+import main.Application;
+
+import static org.junit.Assert.assertEquals;
 
 import java.util.*;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
 
 class ApplicationTest {
 
