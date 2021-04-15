@@ -1,6 +1,10 @@
-import org.junit.jupiter.api.Test;
+package test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+import main.User;
 
 class UserTest {
 
