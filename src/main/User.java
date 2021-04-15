@@ -1,3 +1,5 @@
+package main;
+
 /**
  * 
  * @author laurenbockelman
@@ -13,7 +15,7 @@ public class User {
 	private boolean isAdmin, access, verify;
 
 	// Assigns instance variables to null and isAdmin to false.
-	User() {
+	public User() {
 		this.firstName = null;
 		this.lastName = null;
 		this.userName = null;

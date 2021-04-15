@@ -1,3 +1,5 @@
+package main;
+
 import java.util.List;
 import java.util.Map;
 
@@ -22,6 +24,17 @@ public class Application {
 		setRating(rating);
 		setVerified(isVerified);
 		setPlatformNversion(platformNversion);
+	}
+	public Application() {
+		this.name = null;
+		this.userAdded = null;
+		this.dateAdded = null;
+		this.description = null;
+		this.organization = null;
+		this.link = null;
+		this.price = 0;
+		this.rating = 0;
+		this.isVerified = false;
 	}
 	
 	public String getName() {
