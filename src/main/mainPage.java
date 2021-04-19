@@ -12,7 +12,7 @@ public class mainPage extends JPanel{
 	
 	private JPanel panel = new JPanel();
 	// creates arraylist of applications (from app class)
-	private ArrayList<Application> verifiedApps = new ArrayList<Application>();
+	private static ArrayList<Application> verifiedApps = new ArrayList<Application>();
 
 	public static void main(String[] args) {
 		mainPage main = new mainPage();
@@ -54,13 +54,13 @@ public class mainPage extends JPanel{
 		verifiedApps = loadVerifiedApps(); // Issac is implementing this method.
 	}
 	// place holder for this method
-	private ArrayList<Application> loadVerifiedApps() {
+	private static ArrayList<Application> loadVerifiedApps() {
 		return verifiedApps;
 	}
 	
-	// create private method that recalls verified apps
+	// create  method that recalls verified apps
 	// call loadVerified method
-	void recallVerified() {
+	public static void recallVerified() {
 		verifiedApps = loadVerifiedApps();
 	}
 	
