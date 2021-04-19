@@ -53,6 +53,16 @@ public class mainPage extends JPanel{
 		
 		verifiedApps = loadVerifiedApps(); // Issac is implementing this method.
 	}
+	// place holder for this method
+	private ArrayList<Application> loadVerifiedApps() {
+		return verifiedApps;
+	}
+	
+	// create private method that recalls verified apps
+	// call loadVerified method
+	private void recallVerified() {
+		verifiedApps = loadVerifiedApps();
+	}
 	
 
 }
