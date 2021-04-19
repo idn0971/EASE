@@ -11,6 +11,8 @@ import javax.swing.border.TitledBorder;
 public class mainPage extends JPanel{
 	
 	private JPanel panel = new JPanel();
+	// creates arraylist of applications (from app class)
+	private ArrayList<Application> verifiedApps = new ArrayList<Application>();
 
 	public static void main(String[] args) {
 		mainPage main = new mainPage();
@@ -48,6 +50,8 @@ public class mainPage extends JPanel{
 		applications.add(date);
 		
 		panel.add(applications, BorderLayout.SOUTH);
+		
+		verifiedApps = loadVerifiedApps(); // Issac is implementing this method.
 	}
 	
 
