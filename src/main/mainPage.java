@@ -60,7 +60,7 @@ public class mainPage extends JPanel{
 	
 	// create private method that recalls verified apps
 	// call loadVerified method
-	private void recallVerified() {
+	void recallVerified() {
 		verifiedApps = loadVerifiedApps();
 	}
 	
