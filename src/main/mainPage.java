@@ -15,8 +15,8 @@ import java.sql.Statement;
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
 
-public class mainPage extends JPanel implements ActionListener{
-	
+public class mainPage extends JPanel {
+
 	private JPanel panel = new JPanel();
 
 	// creates arraylist of applications (from app class)
@@ -26,12 +26,12 @@ public class mainPage extends JPanel implements ActionListener{
 		mainPage main = new mainPage();
 
 	}
-	
+
 	private JComboBox filter;
 	private JButton submit;
-	private String filters[] 
+	private String filters[]
 			= { "Select One", "Rating", "KeyWord", "Category"};
-	
+
 	public mainPage() {
 		JPanel search =  new JPanel();
 		search.setLayout(new GridLayout(1,2));
@@ -39,17 +39,17 @@ public class mainPage extends JPanel implements ActionListener{
 		JTextField bar = new JTextField("What would you like to find?", 50);
 		search.add(dummyBar);
 		search.add(bar);
-		
+
 		panel.add(search, BorderLayout.NORTH);
-		
+
 		JPanel button = new JPanel();
 		submit = new JButton("Search");
 		button.add(submit);
 		filter = new JComboBox(filters);
 		button.add(filter);
-		
+
 		panel.add(button, BorderLayout.CENTER);
-		
+
 		JPanel applications = new JPanel();
 		applications.setBorder(new TitledBorder("Applications Preview"));
 		applications.setLayout(new GridLayout(1,5));
@@ -63,87 +63,10 @@ public class mainPage extends JPanel implements ActionListener{
 		applications.add(size);
 		applications.add(user);
 		applications.add(date);
-		
+
 		panel.add(applications, BorderLayout.SOUTH);
 	}
-	// place holder for this method
-	private static ArrayList<Application> loadVerifiedApps() {
-		ArrayList <Application> apps = new ArrayList<>();
-		String sql = "SELECT * "
-				+ "FROM Application WHERE verified = 1";
 
-		try (Connection conn = connect();
-			 Statement stmt  = conn.createStatement();
-			 ResultSet rs    = stmt.executeQuery(sql)){
-
-			// loop through the result set
-			while (rs.next()) {
-				boolean verified = false;
-				if (rs.getInt("isVerified") == 1){
-					verified = true;
-				}
-				Application app = new Application(rs.getString("name"), rs.getString("userAdded"),
-						rs.getString("dateAdded"), rs.getString("description"),
-						rs.getString("organization"), rs.getString("link"),
-						rs.getDouble("price"),
-						rs.getDouble("rating"), verified , null);
-				apps.add(app);
-			}
-		} catch (SQLException e) {
-			System.out.println(e.getMessage());
-		}
-		return apps;
-	}
-
-	// create method that recalls verified apps
-	// call loadVerified method
-	public static void recallVerified() {
-		verifiedApps = loadVerifiedApps();
-	}
-
-	// place holder for this method
-	private static ArrayList<Application> searchVerifiedApps() {
-		return verifiedApps;
-	}
-
-
-	// private method that displays the verifiedApps with GUI in mainpage
-	private static void displayVerified() {
-		Application app = new Application();
-		for (Application a : verifiedApps) {
-			if (a.isVerified()) {
-				JTextArea displayVerifiedApps = new JTextArea(10, 30);
-				displayVerifiedApps.append(loadVerifiedApps().toString() + "\n");
-			}
-		}
-
-	}
-
-	private static Connection connect() {
-		// SQLite connection string
-		String url = "jdbc:sqlite:sqlite/EASE.db";
-		Connection conn = null;
-		try {
-			conn = DriverManager.getConnection(url);
-		} catch (SQLException e) {
-			System.out.println(e.getMessage());
-		}
-		return conn;
-	}
-
-	// create private method to take keyword
-	// when user clicks search button using actionlistener
-	// take what is in search bar == keyword
-	// verifiedApps = searchVerifiedApps();
-	public void actionPerformed(ActionEvent e) {
-		if (e.getActionCommand().equals("Search")) {
-			verifiedApps = searchVerifiedApps(); // figure out how access the user input
-			JTextArea searchBox = new JTextArea(10, 30);
-			searchBox.append(searchVerifiedApps().toString() + "\n");
-		} else if (e.getSource() == submit) {
-            String selectedFilter = (String)filter.getSelectedItem();
-        }
-	}
 
 
 	

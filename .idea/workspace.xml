@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="101ebfbf-6596-47b0-9e62-30b0570b7685" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/AddApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AddApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/mainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mainPage.java" afterDir="false" />
     </list>
     <list id="00c0cd72-1690-4887-a4ab-8cd48903ab98" name="Revert: Revert &quot;build script&quot;" comment="">
@@ -45,7 +45,7 @@
           <entry key="class" value="1" />
           <entry key="classpath" value="1" />
           <entry key="gitignore" value="2" />
-          <entry key="java" value="33" />
+          <entry key="java" value="34" />
           <entry key="project" value="2" />
           <entry key="xml" value="6" />
         </counts>
@@ -54,21 +54,21 @@
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="Eclipse" value="3" />
-          <entry key="JAVA" value="33" />
+          <entry key="JAVA" value="34" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="XML" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2124" />
-          <entry key="txt" value="306" />
+          <entry key="java" value="2161" />
+          <entry key="txt" value="333" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2124" />
-          <entry key="PLAIN_TEXT" value="306" />
+          <entry key="JAVA" value="2161" />
+          <entry key="PLAIN_TEXT" value="333" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -80,18 +80,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/mainPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="22" column="86" selection-start-line="22" selection-start-column="86" selection-end-line="22" selection-end-column="86" />
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/HomePage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-85">
+              <caret line="42" column="16" lean-forward="true" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#630#643#0" expanded="true" />
-                <element signature="e#2762#2763#0" expanded="true" />
-                <element signature="e#2802#2803#0" expanded="true" />
-                <element signature="e#2898#2899#0" expanded="true" />
-                <element signature="e#2924#2925#0" expanded="true" />
+                <element signature="e#377#390#0" expanded="true" />
+                <element signature="e#2806#2807#0" expanded="true" />
+                <element signature="e#2846#2847#0" expanded="true" />
+                <element signature="e#2942#2943#0" expanded="true" />
+                <element signature="e#2968#2969#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -202,6 +210,7 @@
         <option value="$PROJECT_DIR$/src/main/Login.java" />
         <option value="$PROJECT_DIR$/src/test/LoginTest.java" />
         <option value="$PROJECT_DIR$/src/main/AddApp.java" />
+        <option value="$PROJECT_DIR$/src/main/HomePage.java" />
         <option value="$PROJECT_DIR$/src/main/mainPage.java" />
       </list>
     </option>
@@ -212,10 +221,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1612" />
-    <option name="y" value="-28" />
-    <option name="width" value="2625" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-15" />
+    <option name="width" value="2968" />
     <option name="height" value="2075" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -342,7 +350,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LoginTest.createAndFindUser">
+  <component name="RunManager" selected="Application.HomePage">
     <configuration name="AddApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="AddApp" />
       <module name="EASEApplication" />
@@ -408,11 +416,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HomePage" />
+        <item itemvalue="Application.mainPage" />
         <item itemvalue="JUnit.LoginTest.createAndFindUser" />
         <item itemvalue="JUnit.LoginTest" />
         <item itemvalue="Application.AddApp" />
-        <item itemvalue="Application.mainPage" />
-        <item itemvalue="Application.HomePage" />
       </list>
     </recent_temporary>
   </component>
@@ -553,13 +561,17 @@
       <option name="project" value="LOCAL" />
       <updated>1618941329309</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Fixed merge bugs">
+      <created>1618945544170</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1618945544170</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LoginTest - 2021.04.20 at 12h 09m 38s.xml">
-      <configuration name="LoginTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LoginTest - 2021.04.20 at 12h 09m 44s.xml">
       <configuration name="LoginTest" configurationId="JUnit" />
     </history-entry>
@@ -587,6 +599,9 @@
     <history-entry file="LoginTest - 2021.04.20 at 12h 39m 56s.xml">
       <configuration name="LoginTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="LoginTest_createAndFindUser - 2021.04.20 at 15h 05m 19s.xml">
+      <configuration name="LoginTest.createAndFindUser" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -598,10 +613,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <frame x="-6" y="0" width="1187" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21529175" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2843224" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
@@ -609,15 +624,15 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.79476863" weight="0.24752475" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7936227" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49899396" weight="0.39886847" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49899396" weight="0.32956153" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.40710932" side_tool="true" visible="true" weight="0.3281471" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.5928907" visible="true" weight="0.3281471" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.7276995" weight="0.32673267" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.20637733" side_tool="true" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.5928907" weight="0.3281471" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.72702885" weight="0.32673267" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -679,7 +694,8 @@
     <MESSAGE value="Implemented adding apps to database" />
     <MESSAGE value="Implemented adding users and checking logins to database" />
     <MESSAGE value="Added login tests and debugging" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added login tests and debugging" />
+    <MESSAGE value="Fixed merge bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed merge bugs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -887,15 +903,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/mainPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="22" column="86" selection-start-line="22" selection-start-column="86" selection-end-line="22" selection-end-column="86" />
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/HomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="42" column="16" lean-forward="true" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#630#643#0" expanded="true" />
-            <element signature="e#2762#2763#0" expanded="true" />
-            <element signature="e#2802#2803#0" expanded="true" />
-            <element signature="e#2898#2899#0" expanded="true" />
-            <element signature="e#2924#2925#0" expanded="true" />
+            <element signature="e#377#390#0" expanded="true" />
+            <element signature="e#2806#2807#0" expanded="true" />
+            <element signature="e#2846#2847#0" expanded="true" />
+            <element signature="e#2942#2943#0" expanded="true" />
+            <element signature="e#2968#2969#0" expanded="true" />
           </folding>
         </state>
       </provider>
