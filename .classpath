@@ -4,6 +4,7 @@
 	<classpathentry kind="src" path="src/main"/>
 	<classpathentry kind="src" path="src/test"/>
 	<classpathentry kind="src" path="src/test/resources"/>
-	<classpathentry kind="var" path="MAVEN_REPOSITORY/org/junit/jupiter/junit-jupiter-api/5.8.0-M1/junit-jupiter-api-5.8.0-M1.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/JUnit5.2"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/sqlite-jdbc-3.34.0"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
