@@ -4,10 +4,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.WindowConstants;
@@ -16,12 +18,27 @@ import javax.swing.border.TitledBorder;
 @SuppressWarnings("serial")
 public class HomePage extends JPanel{
  
+	private String filters[] 
+			= { "Select One", "Rating", "KeyWord", "Category"};
+	private JComboBox filter;
+	static JMenuBar menu;
 	
 	public HomePage() {
 		// TODO Auto-generated method stub
 				JFrame frame = new JFrame("EASE Development");
 				frame.setLayout(new GridLayout(3,1));
 				frame.setSize(500, 240);
+				
+				// menu Bar creation
+				menu = new JMenuBar();
+				// menu
+				JMenu mb = new JMenu("Menu");
+				JMenuItem searchin = new JMenuItem("Seach Page");
+				JMenuItem loginpop = new JMenuItem("Log in");
+				mb.add(searchin);
+				mb.add(loginpop);
+				menu.add(mb);
+				frame.setJMenuBar(menu);
 				
 				JPanel search =  new JPanel();
 				search.setLayout(new GridLayout(1,2));
@@ -33,8 +50,12 @@ public class HomePage extends JPanel{
 				frame.add(search, BorderLayout.NORTH);
 				
 				JPanel button = new JPanel();
+				button.setLayout(new GridLayout(2,1));
 				JButton submit = new JButton("Search");
 				button.add(submit);
+				filter = new JComboBox(filters);
+				filter.setSize(60,20);
+				button.add(filter);
 				
 				frame.add(button, BorderLayout.CENTER);
 				
