@@ -1,11 +1,11 @@
-package main;
+
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.*;
 import java.awt.event.*;
 
-import java.swing.*;
+import javax.swing.*;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -59,7 +59,7 @@ public class AddApp extends JFrame implements ActionListener {
 		//textfields and adding
 		JTextField name1 = new JTextField("Name", 100);
 		c.add(name1);
-		JTextField date1 = new JTextField("Date", 10)
+		JTextField date1 = new JTextField("Date", 10);
 		c.add(date1);
 		JTextField user1 = new JTextField("Username", 50);
 		c.add(user1);
