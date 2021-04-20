@@ -9,7 +9,7 @@ import javax.swing.*;
 import javax.swing.border.TitledBorder;
 
 @SuppressWarnings("serial")
-public class HomePage extends JPanel{
+public class HomePage extends JPanel implements ActionListener {
 
 	private static ArrayList<Application> verifiedApps = new ArrayList<Application>();
 
@@ -160,11 +160,14 @@ public class HomePage extends JPanel{
 	// when user clicks search button using actionlistener
 	// take what is in search bar == keyword
 	// verifiedApps = searchVerifiedApps();
+	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getActionCommand().equals("Search")) {
-			String test = "test";
+			JTextField bar = new JTextField("What would you like to find?", 50);
+			bar.addActionListener(this);
+			String usrInput = bar.getText();
 			ArrayList<Application> searchResults = new ArrayList<>();
-			searchResults = searchVerifiedApps(test); // figure out how access the user input
+			searchResults = searchVerifiedApps(usrInput); // figure out how access the user input
 			for (Application s : searchResults) {
 				JTextArea searchBox = new JTextArea(10, 30);
 				searchBox.append(s.toString() + "\n");
