@@ -38,9 +38,9 @@ public class Login {
 				//Button Panel
 				JPanel buttons = new JPanel();
 				JButton sign = new JButton("Sign in");
-				JButton forg = new JButton("Forgot username/password");
+				JButton create = new JButton("Create user");
 				buttons.add(sign);
-				buttons.add(forg);
+				buttons.add(create);
 				
 				//Adding pannels to the frame
 				frame.add(name, BorderLayout.NORTH);
@@ -51,6 +51,8 @@ public class Login {
 				frame.setVisible(true);
 				frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 	}
+
+
 	
 	public static void main(String[] args) {
 		Login log = new Login();
