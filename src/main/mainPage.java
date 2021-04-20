@@ -1,9 +1,11 @@
-package main;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JMenuBar;
 import javax.swing.JPanel;
@@ -20,6 +22,7 @@ public class mainPage extends JPanel implements ActionListener{
 	}
 	
 	private JComboBox filter;
+	private JButton submit;
 	private String filters[] 
 			= { "Select One", "Rating", "KeyWord", "Category"};
 	
@@ -34,7 +37,7 @@ public class mainPage extends JPanel implements ActionListener{
 		panel.add(search, BorderLayout.NORTH);
 		
 		JPanel button = new JPanel();
-		JButton submit = new JButton("Search");
+		submit = new JButton("Search");
 		button.add(submit);
 		filter = new JComboBox(filters);
 		button.add(filter);
