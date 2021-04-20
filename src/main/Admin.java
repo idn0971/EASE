@@ -56,6 +56,8 @@ public class Admin implements ActionListener {
 		Application app = new Application();
 		if (e.getActionCommand().equals("Approve")) {
 			 app.setVerified(true);
+			// call method from mainPage
+			 mainPage.recallVerified();
 			// --- send user out of waiting page to verfication page ---
 		} else if (e.getActionCommand().equals("Deny")) {
 			 app.setVerified(false);
