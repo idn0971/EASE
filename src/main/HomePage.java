@@ -138,7 +138,7 @@ public class HomePage extends JPanel{
 		for (Application a : verifiedApps) {
 			if (a.isVerified()) {
 				JTextArea displayVerifiedApps = new JTextArea(10, 30);
-				displayVerifiedApps.append(verifiedApps.toString() + "\n");
+				displayVerifiedApps.append(a.toString() + "\n");
 			}
 		}
 
@@ -165,7 +165,7 @@ public class HomePage extends JPanel{
 		    String test = "test";
 		    ArrayList<Application> searchResults = new ArrayList<>();
 			searchResults = searchVerifiedApps(test); // figure out how access the user input
-			JTextArea searchBox = new JTextArea(10, 30);
+            JTextArea searchBox = new JTextArea(10, 30);
 			searchBox.append(searchResults.toString() + "\n");
 		} else if (e.getSource() == submit) {
 			String selectedFilter = (String)filter.getSelectedItem();
