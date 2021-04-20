@@ -5,5 +5,8 @@
 		<testFolder url="file://$MODULE_DIR$/src/test"/>
 		<testFolder url="file://$MODULE_DIR$/src/test/resources"/>
 	</contentEntry>
-	<lib name="JUnit5.2" scope="TEST"/>
+	<levels>
+		<level name="JUnit5.2" value="project"/>
+		<level name="sqlite-jdbc-3.34.0" value="project"/>
+	</levels>
 </component>
