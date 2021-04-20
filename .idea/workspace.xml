@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="101ebfbf-6596-47b0-9e62-30b0570b7685" name="Default Changelist" comment="Implemented adding users and checking logins to database">
-      <change afterPath="$PROJECT_DIR$/src/test/LoginTest.java" afterDir="false" />
+    <list default="true" id="101ebfbf-6596-47b0-9e62-30b0570b7685" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sqlite/EASE.db" beforeDir="false" afterPath="$PROJECT_DIR$/sqlite/EASE.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/AddApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AddApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/mainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/mainPage.java" afterDir="false" />
     </list>
     <list id="00c0cd72-1690-4887-a4ab-8cd48903ab98" name="Revert: Revert &quot;build script&quot;" comment="">
       <change afterPath="$PROJECT_DIR$/Running Build Script Instructions.txt" afterDir="false" />
@@ -33,7 +28,7 @@
     <session id="228994481">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="2" />
@@ -65,13 +60,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="2117" />
-          <entry key="txt" value="263" />
+          <entry key="txt" value="306" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="2117" />
-          <entry key="PLAIN_TEXT" value="263" />
+          <entry key="PLAIN_TEXT" value="306" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -83,11 +78,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/mainPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-437">
-              <caret line="76" column="35" lean-forward="true" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
+            <state relative-caret-position="175">
+              <caret line="136" column="38" selection-start-line="136" selection-start-column="38" selection-end-line="136" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#691#704#0" expanded="true" />
@@ -103,7 +98,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-988">
+            <state relative-caret-position="-172">
               <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
             </state>
           </provider>
@@ -139,20 +134,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/LoginTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="14" column="59" lean-forward="true" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.8.0-M1/junit-platform-commons-1.8.0-M1.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="365" selection-start-line="365" selection-end-line="365" />
+            <state relative-caret-position="272">
+              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -226,7 +212,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1267" />
+    <option name="x" value="1265" />
     <option name="y" value="-50" />
     <option name="width" value="2625" />
     <option name="height" value="2075" />
@@ -552,16 +538,17 @@
       <option name="project" value="LOCAL" />
       <updated>1618934189990</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added login tests and debugging">
+      <created>1618937051491</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1618937051491</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LoginTest - 2021.04.20 at 12h 08m 18s.xml">
-      <configuration name="LoginTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LoginTest - 2021.04.20 at 12h 09m 10s.xml">
-      <configuration name="LoginTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LoginTest - 2021.04.20 at 12h 09m 38s.xml">
       <configuration name="LoginTest" configurationId="JUnit" />
     </history-entry>
@@ -586,6 +573,12 @@
     <history-entry file="LoginTest - 2021.04.20 at 12h 22m 17s.xml">
       <configuration name="LoginTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="LoginTest_createAndFindUser - 2021.04.20 at 12h 39m 49s.xml">
+      <configuration name="LoginTest.createAndFindUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LoginTest - 2021.04.20 at 12h 39m 56s.xml">
+      <configuration name="LoginTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -598,7 +591,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.212609" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -608,7 +600,7 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.79476863" visible="true" weight="0.24752475" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.79476863" weight="0.24752475" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49899396" weight="0.39886847" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -677,7 +669,8 @@
     <MESSAGE value="Implemented loading verified apps" />
     <MESSAGE value="Implemented adding apps to database" />
     <MESSAGE value="Implemented adding users and checking logins to database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented adding users and checking logins to database" />
+    <MESSAGE value="Added login tests and debugging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added login tests and debugging" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -821,28 +814,6 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-988">
-          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/mainPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-437">
-          <caret line="76" column="35" lean-forward="true" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#691#704#0" expanded="true" />
-            <element signature="e#2870#2871#0" expanded="true" />
-            <element signature="e#2910#2911#0" expanded="true" />
-            <element signature="e#3006#3007#0" expanded="true" />
-            <element signature="e#3032#3033#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/database.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -897,8 +868,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/LoginTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="59" lean-forward="true" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
+        <state relative-caret-position="272">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-172">
+          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/mainPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="136" column="38" selection-start-line="136" selection-start-column="38" selection-end-line="136" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#691#704#0" expanded="true" />
+            <element signature="e#2870#2871#0" expanded="true" />
+            <element signature="e#2910#2911#0" expanded="true" />
+            <element signature="e#3006#3007#0" expanded="true" />
+            <element signature="e#3032#3033#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
