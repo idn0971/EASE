@@ -1,6 +1,9 @@
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
+import java.sql.*;
+import java.util.ArrayList;
 
+import javax.jws.soap.SOAPBinding;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -52,7 +55,48 @@ public class Login {
 				frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 	}
 
+    public void createUser(String userName, String password) {
+        String sql = "INSERT INTO Applications(userName, password) VALUES(?,?)";
 
+        try (Connection conn = connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, userName);
+            pstmt.setString(2, password);
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    private static User findUser(String userName, String password) {
+        User user = new User();
+        String sql = "SELECT * "
+                + "FROM User WHERE userName = ? AND password = ?";
+
+        try (Connection conn = connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, userName);
+            pstmt.setString(2, password);
+             ResultSet rs    = pstmt.executeQuery(sql);
+             user.setUserName(userName);
+             user.setPassword(password);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return user;
+    }
+
+    private static Connection connect() {
+        // SQLite connection string
+        String url = "jdbc:sqlite:sqlite/EASE.db";
+        Connection conn = null;
+        try {
+            conn = DriverManager.getConnection(url);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return conn;
+    }
 	
 	public static void main(String[] args) {
 		Login log = new Login();

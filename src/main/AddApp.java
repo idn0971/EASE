@@ -66,7 +66,7 @@ public class AddApp {
         return conn;
     }
 
-    public void insert(String name, String userAdded, String dateAdded, String description, String organization,
+    public void createApp(String name, String userAdded, String dateAdded, String description, String organization,
                        String link, Double price) {
         String sql = "INSERT INTO Applications(name,userAdded,dateAdded,description,organization,link," +
                 "price,isVerified,rating) VALUES(?,?,?,?,?,?,?,0,0)";
