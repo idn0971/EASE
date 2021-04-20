@@ -14,9 +14,12 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
-import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.PreparedStatement;
 
 public class mainPage extends JPanel implements ActionListener {
 
@@ -69,7 +72,31 @@ public class mainPage extends JPanel implements ActionListener {
 
 	// place holder for this method
 	private static ArrayList<Application> loadVerifiedApps() {
-		return verifiedApps;
+		ArrayList <Application> apps = new ArrayList<>();
+		String sql = "SELECT * "
+				+ "FROM Applications WHERE verified = 1";
+
+		try (Connection conn = connect();
+			 Statement stmt  = conn.createStatement();
+			 ResultSet rs    = stmt.executeQuery(sql)){
+
+			// loop through the result set
+			while (rs.next()) {
+				boolean verified = false;
+				if (rs.getInt("isVerified") == 1){
+					verified = true;
+				}
+				Application app = new Application(rs.getString("name"), rs.getString("userAdded"),
+						rs.getString("dateAdded"), rs.getString("description"),
+						rs.getString("organization"), rs.getString("link"),
+						 rs.getDouble("price"),
+						rs.getDouble("rating"), verified , null);
+				apps.add(app);
+			}
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
+		return apps;
 	}
 
 	// create method that recalls verified apps
@@ -107,7 +134,7 @@ public class mainPage extends JPanel implements ActionListener {
 
 	}
 
-    private Connection connect() {
+    private static Connection connect() {
         // SQLite connection string
         String url = "jdbc:sqlite:sqlite/EASE.db";
         Connection conn = null;

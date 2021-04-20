@@ -25,6 +25,8 @@ CREATE TABLE AddApp (
   dateAdded TEXT NOT NULL,
   description TEXT NOT NULL,
   organization TEXT NOT NULL,
+  link TEXT NOT NULL,
+  isVerified INTEGER NOT NULL,
   price DOUBLE NOT NULL,
   rating DOUBLE NOT NULL
   );
