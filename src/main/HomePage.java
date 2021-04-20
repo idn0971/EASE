@@ -162,13 +162,15 @@ public class HomePage extends JPanel{
 	// verifiedApps = searchVerifiedApps();
 	public void actionPerformed(ActionEvent e) {
 		if (e.getActionCommand().equals("Search")) {
-		    String test = "test";
-		    ArrayList<Application> searchResults = new ArrayList<>();
+			String test = "test";
+			ArrayList<Application> searchResults = new ArrayList<>();
 			searchResults = searchVerifiedApps(test); // figure out how access the user input
-            JTextArea searchBox = new JTextArea(10, 30);
-			searchBox.append(searchResults.toString() + "\n");
+			for (Application s : searchResults) {
+				JTextArea searchBox = new JTextArea(10, 30);
+				searchBox.append(s.toString() + "\n");
+			}
 		} else if (e.getSource() == submit) {
-			String selectedFilter = (String)filter.getSelectedItem();
+			String selectedFilter = (String) filter.getSelectedItem();
 		}
 	}
 	
