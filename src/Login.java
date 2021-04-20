@@ -12,6 +12,9 @@ import javax.swing.WindowConstants;
 import javax.swing.border.TitledBorder;
 
 public class Login {
+	/*
+	 * Generates Login popup for the user or admin to log in
+	 */
 	public Login() {
 		// TODO Auto-generated method stub
 				JFrame frame = new JFrame("Welcome");

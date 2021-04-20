@@ -19,6 +19,10 @@ public class mainPage extends JPanel{
 
 	}
 	
+	private JComboBox filter;
+	private String filters[] 
+			= { "Select One", "Rating", "KeyWord", "Category"};
+	
 	public mainPage() {
 		JPanel search =  new JPanel();
 		search.setLayout(new GridLayout(1,2));
@@ -32,6 +36,8 @@ public class mainPage extends JPanel{
 		JPanel button = new JPanel();
 		JButton submit = new JButton("Search");
 		button.add(submit);
+		filter = new JComboBox(filters);
+		button.add(filter);
 		
 		panel.add(button, BorderLayout.CENTER);
 		

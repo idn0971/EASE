@@ -15,12 +15,18 @@ import javax.swing.border.TitledBorder;
 public class Admin implements ActionListener {
 
 	public Admin() {
+		/* Create JFrame to house the panel
+		 * 
+		 */
 		JFrame frame = new JFrame("Admin");
 		frame.setLayout(new GridLayout(3, 1));
 		frame.setSize(400, 240);
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
+		/*
+		 * Creates Panel for the buttons and adds button objects to it.
+		 */
 		JPanel buttons = new JPanel();
 		buttons.setLayout(new GridLayout(1, 2));
 		JButton approve = new JButton("Approve");
@@ -30,8 +36,14 @@ public class Admin implements ActionListener {
 		buttons.add(approve);
 		buttons.add(deny);
 
+		/*
+		 * Adds button panel to frame
+		 */
 		frame.add(buttons, BorderLayout.NORTH);
 
+		/*
+		 * JLabels for the application and can be changes when we have program running
+		 */
 		JPanel applications = new JPanel();
 		applications.setBorder(new TitledBorder("Applications Requests"));
 		applications.setLayout(new GridLayout(1, 5));

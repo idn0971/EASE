@@ -14,6 +14,9 @@ public class Wait {
 		Wait w = new Wait();
 	}
 	
+	/*
+	 * Waiting page for the user to see while admin is processing the request
+	 */
 	public Wait() {
 		JFrame frame = new JFrame("Welcome");
 		frame.setLayout(new BorderLayout());
