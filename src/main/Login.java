@@ -56,7 +56,7 @@ public class Login {
 	}
 
     public void createUser(String userName, String password) {
-        String sql = "INSERT INTO Applications(userName, password) VALUES(?,?)";
+        String sql = "INSERT INTO Login(userName, password) VALUES(?,?)";
 
         try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
@@ -68,18 +68,18 @@ public class Login {
         }
     }
 
-    private static User findUser(String userName, String password) {
+    public  User findUser(String userName, String password) {
         User user = new User();
         String sql = "SELECT * "
-                + "FROM User WHERE userName = ? AND password = ?";
+                + "FROM Login WHERE userName = ? AND password = ?";
 
         try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, userName);
             pstmt.setString(2, password);
              ResultSet rs    = pstmt.executeQuery(sql);
-             user.setUserName(userName);
-             user.setPassword(password);
+             user.setUserName(rs.getString("userName"));
+             user.setPassword("password");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }

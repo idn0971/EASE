@@ -74,7 +74,7 @@ public class mainPage extends JPanel implements ActionListener {
 	private static ArrayList<Application> loadVerifiedApps() {
 		ArrayList <Application> apps = new ArrayList<>();
 		String sql = "SELECT * "
-				+ "FROM Applications WHERE verified = 1";
+				+ "FROM Application WHERE verified = 1";
 
 		try (Connection conn = connect();
 			 Statement stmt  = conn.createStatement();
