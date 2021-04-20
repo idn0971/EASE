@@ -104,18 +104,41 @@ public class HomePage extends JPanel{
 	}
 
 	// place holder for this method
-	private static ArrayList<Application> searchVerifiedApps() {
-		return verifiedApps;
+	private static ArrayList<Application> searchVerifiedApps(String keyword) {
+        ArrayList<Application> searchResult = new ArrayList<>();
+        String sql = "SELECT * "
+                + "FROM Application WHERE isVerified = 1 AND name LIKE ?";
+
+        try (Connection conn = connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, keyword);
+            ResultSet rs    = pstmt.executeQuery(sql);
+            while (rs.next()) {
+                boolean verified = false;
+                if (rs.getInt("isVerified") == 1) {
+                    verified = true;
+                }
+                Application app = new Application(rs.getString("name"), rs.getString("userAdded"),
+                        rs.getString("dateAdded"), rs.getString("description"),
+                        rs.getString("organization"), rs.getString("link"),
+                        rs.getDouble("price"),
+                        rs.getDouble("rating"), verified, null);
+                searchResult.add(app);
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return searchResult;
 	}
 
 
 	// private method that displays the verifiedApps with GUI in mainpage
 	private static void displayVerified() {
-		Application app = new Application();
+		verifiedApps = loadVerifiedApps();
 		for (Application a : verifiedApps) {
 			if (a.isVerified()) {
 				JTextArea displayVerifiedApps = new JTextArea(10, 30);
-				displayVerifiedApps.append(loadVerifiedApps().toString() + "\n");
+				displayVerifiedApps.append(verifiedApps.toString() + "\n");
 			}
 		}
 
@@ -139,9 +162,11 @@ public class HomePage extends JPanel{
 	// verifiedApps = searchVerifiedApps();
 	public void actionPerformed(ActionEvent e) {
 		if (e.getActionCommand().equals("Search")) {
-			verifiedApps = searchVerifiedApps(); // figure out how access the user input
+		    String test = "test";
+		    ArrayList<Application> searchResults = new ArrayList<>();
+			searchResults = searchVerifiedApps(test); // figure out how access the user input
 			JTextArea searchBox = new JTextArea(10, 30);
-			searchBox.append(searchVerifiedApps().toString() + "\n");
+			searchBox.append(searchResults.toString() + "\n");
 		} else if (e.getSource() == submit) {
 			String selectedFilter = (String)filter.getSelectedItem();
 		}
