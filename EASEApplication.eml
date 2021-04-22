@@ -3,7 +3,6 @@
 	<exclude-output/>
 	<contentEntry url="file://$MODULE_DIR$">
 		<testFolder url="file://$MODULE_DIR$/src/test"/>
-		<testFolder url="file://$MODULE_DIR$/src/test/resources"/>
 	</contentEntry>
 	<levels>
 		<level name="JUnit5.2" value="project"/>

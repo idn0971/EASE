@@ -1,0 +1,5 @@
+1. Add all source files to a Java project in Eclipse
+   - Right click on the Java project > import > file system > select files to add
+2. Run build.xml by clicking the run button in Eclipse > select EASE build.xml > OK
+
+Build script is run successfully!

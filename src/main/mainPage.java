@@ -4,28 +4,34 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JLabel;
-import javax.swing.JMenuBar;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.*;
 import javax.swing.border.TitledBorder;
 
-public class mainPage extends JPanel implements ActionListener{
-	
+import java.sql.DriverManager;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.PreparedStatement;
+import java.util.ArrayList;
+
+public class mainPage extends JPanel {
+
 	private JPanel panel = new JPanel();
+
+	// creates arraylist of applications (from app class)
+	private static ArrayList<Application> verifiedApps = new ArrayList<Application>();
 
 	public static void main(String[] args) {
 		mainPage main = new mainPage();
 
 	}
-	
+
 	private JComboBox filter;
 	private JButton submit;
-	private String filters[] 
+	private String filters[]
 			= { "Select One", "Rating", "KeyWord", "Category"};
-	
+
 	public mainPage() {
 		JPanel search =  new JPanel();
 		search.setLayout(new GridLayout(1,2));
@@ -33,17 +39,17 @@ public class mainPage extends JPanel implements ActionListener{
 		JTextField bar = new JTextField("What would you like to find?", 50);
 		search.add(dummyBar);
 		search.add(bar);
-		
+
 		panel.add(search, BorderLayout.NORTH);
-		
+
 		JPanel button = new JPanel();
 		submit = new JButton("Search");
 		button.add(submit);
 		filter = new JComboBox(filters);
 		button.add(filter);
-		
+
 		panel.add(button, BorderLayout.CENTER);
-		
+
 		JPanel applications = new JPanel();
 		applications.setBorder(new TitledBorder("Applications Preview"));
 		applications.setLayout(new GridLayout(1,5));
@@ -57,16 +63,14 @@ public class mainPage extends JPanel implements ActionListener{
 		applications.add(size);
 		applications.add(user);
 		applications.add(date);
-		
+
 		panel.add(applications, BorderLayout.SOUTH);
 	}
+
+
+
 	
-	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == submit) {
-			String selectedFilter = (String)filter.getSelectedItem();
-		}
-		
-	}
+
 	
 
 }

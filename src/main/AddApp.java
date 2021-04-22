@@ -5,7 +5,7 @@ import java.awt.GridLayout;
 import java.awt.*;
 import java.awt.event.*;
 
-import java.swing.*;
+import javax.swing.*;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
