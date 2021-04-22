@@ -1,7 +1,11 @@
 import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -16,47 +20,49 @@ import javax.swing.WindowConstants;
 import javax.swing.border.TitledBorder;
 
 @SuppressWarnings("serial")
-public class HomePage extends JPanel{
+public class HomePage extends JPanel implements ItemListener{
  
 	private String filters[] 
 			= { "Select One", "Rating", "KeyWord", "Category"};
-	private JComboBox filter;
-	static JMenuBar menu;
+	static JComboBox filter;
+	static JMenu menu;
+	static JFrame f;
+	static JMenuBar bar;
+	static JMenuItem searchin, pop;
 	
 	public HomePage() {
 		// TODO Auto-generated method stub
 				JFrame frame = new JFrame("EASE Development");
-				frame.setLayout(new GridLayout(3,1));
+				frame.setLayout(new BorderLayout());
 				frame.setSize(500, 240);
 				
 				// menu Bar creation
-				menu = new JMenuBar();
-				// menu
-				JMenu mb = new JMenu("Menu");
-				JMenuItem searchin = new JMenuItem("Seach Page");
-				JMenuItem loginpop = new JMenuItem("Log in");
-				mb.add(searchin);
-				mb.add(loginpop);
-				menu.add(mb);
-				frame.setJMenuBar(menu);
+				bar = new JMenuBar();
+				menu = new JMenu("Menu");
+				searchin = new JMenuItem("Search Page");
+				pop = new JMenuItem("Login Page");
+				menu.add(searchin);
+				menu.add(pop);
+				bar.add(menu);
+				f.setJMenuBar(bar);
 				
-				JPanel search =  new JPanel();
-				search.setLayout(new GridLayout(1,2));
-				JLabel dummyBar = new JLabel("Search");
-				JTextField bar = new JTextField("What would you like to find?", 50);
-				search.add(dummyBar);
-				search.add(bar);
+				//Search Bar
+				JPanel search1 =  new JPanel();
+				search1.setLayout(new GridLayout(1,2));
+				JLabel dummyBar = new JLabel("Search:");
+				JTextField text = new JTextField("What would you like to find?", 50);
+				search1.add(dummyBar);
+				search1.add(text);	
+				frame.add(search1, BorderLayout.NORTH);
 				
-				frame.add(search, BorderLayout.NORTH);
-				
+				//Button and filter
+				filter = new JComboBox(filters);
+				HomePage tH = new HomePage();
+				filter.addItemListener(tH);
 				JPanel button = new JPanel();
-				button.setLayout(new GridLayout(2,1));
 				JButton submit = new JButton("Search");
 				button.add(submit);
-				filter = new JComboBox(filters);
-				filter.setSize(60,20);
 				button.add(filter);
-				
 				frame.add(button, BorderLayout.CENTER);
 				
 				JPanel applications = new JPanel();
@@ -78,10 +84,13 @@ public class HomePage extends JPanel{
 				frame.add(applications, BorderLayout.SOUTH);
 				
 				frame.setVisible(true);
-				frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-				
-				
-		
+				frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);	
+	}
+	
+	public void itemStateChanged(ItemEvent e) {
+		if(e.getSource() == filter) {
+			System.out.println(filter.getSelectedItem() + " selected");
+		}
 	}
 	
 	public static void main(String[] args) {
