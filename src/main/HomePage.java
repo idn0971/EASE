@@ -71,7 +71,7 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
 				JPanel applications = new JPanel();
 				applications.setBorder(new TitledBorder("Applications Preview"));
 				applications.setLayout(new GridLayout(1,5));
-				JLabel app = new JLabel ("helloWorld.java");
+				JLabel app = new JLabel ("App Name");
 				JLabel apple = new JLabel("Picture");
 				JLabel size = new JLabel("size");
 				JLabel user = new JLabel("Author");
@@ -81,12 +81,19 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
 				applications.add(size);
 				applications.add(user);
 				applications.add(date);
+                JList<String> displayList = new JList<>(verifiedApps.toArray(new String[0]));
+                JScrollPane scrollPane = new JScrollPane(displayList);
+                //Lexi Please fix the layout for the scroll frame and figure out how to update it
+                //frame.add(scrollPane);
 
 
 
-				frame.add(applications, BorderLayout.SOUTH);
 
-				frame.setVisible(true);
+        frame.add(applications, BorderLayout.SOUTH);
+
+
+
+        frame.setVisible(true);
 				frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
 

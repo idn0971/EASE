@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="101ebfbf-6596-47b0-9e62-30b0570b7685" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sqlite/EASE.db" beforeDir="false" afterPath="$PROJECT_DIR$/sqlite/EASE.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Login.java" afterDir="false" />
     </list>
     <list id="00c0cd72-1690-4887-a4ab-8cd48903ab98" name="Revert: Revert &quot;build script&quot;" comment="" />
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -47,7 +45,7 @@
           <entry key="class" value="2" />
           <entry key="classpath" value="1" />
           <entry key="gitignore" value="2" />
-          <entry key="java" value="40" />
+          <entry key="java" value="41" />
           <entry key="project" value="2" />
           <entry key="txt" value="1" />
           <entry key="xml" value="6" />
@@ -57,21 +55,21 @@
         <counts>
           <entry key="CLASS" value="2" />
           <entry key="Eclipse" value="3" />
-          <entry key="JAVA" value="40" />
+          <entry key="JAVA" value="41" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="XML" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2655" />
-          <entry key="txt" value="460" />
+          <entry key="java" value="2700" />
+          <entry key="txt" value="480" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2655" />
-          <entry key="PLAIN_TEXT" value="460" />
+          <entry key="JAVA" value="2700" />
+          <entry key="PLAIN_TEXT" value="480" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -83,22 +81,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/HomePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1925">
-              <caret line="125" column="13" lean-forward="true" selection-start-line="125" selection-start-column="13" selection-end-line="125" selection-end-column="13" />
+            <state relative-caret-position="391">
+              <caret line="89" column="39" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#371#398#0" expanded="true" />
-                <element signature="e#6201#6202#0" expanded="true" />
-                <element signature="e#6238#6239#0" expanded="true" />
+                <element signature="e#3849#3850#0" expanded="true" />
+                <element signature="e#3889#3890#0" expanded="true" />
+                <element signature="e#6352#6353#0" expanded="true" />
+                <element signature="e#6389#6390#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/AddApp.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -162,17 +162,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/LoginTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="119">
+              <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.8.0-M1/junit-platform-commons-1.8.0-M1.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
+        <entry file="file://$PROJECT_DIR$/src/test/UserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="365" selection-start-line="365" selection-end-line="365" />
+            <state relative-caret-position="238">
+              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -370,16 +370,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.AddApp">
+  <component name="RunManager" selected="Application.HomePage">
     <configuration name="AddApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="AddApp" />
-      <module name="EASEApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CreateAccount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CreateAccount" />
       <module name="EASEApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -415,6 +408,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="EASEApplication" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LoginTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LoginTest.createAndFindUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="EASEApplication" />
       <option name="PACKAGE_NAME" value="" />
@@ -428,18 +429,18 @@
     <list>
       <item itemvalue="JUnit.ApplicationTest" />
       <item itemvalue="Application.HomePage" />
-      <item itemvalue="Application.CreateAccount" />
       <item itemvalue="Application.Login" />
       <item itemvalue="JUnit.LoginTest.createAndFindUser" />
       <item itemvalue="Application.AddApp" />
+      <item itemvalue="JUnit.LoginTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AddApp" />
         <item itemvalue="Application.HomePage" />
+        <item itemvalue="JUnit.LoginTest" />
+        <item itemvalue="Application.AddApp" />
         <item itemvalue="JUnit.LoginTest.createAndFindUser" />
         <item itemvalue="Application.Login" />
-        <item itemvalue="Application.CreateAccount" />
       </list>
     </recent_temporary>
   </component>
@@ -629,13 +630,17 @@
       <option name="project" value="LOCAL" />
       <updated>1619219150468</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Fixed database error">
+      <created>1619220128137</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1619220128137</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LoginTest - 2021.04.20 at 12h 22m 17s.xml">
-      <configuration name="LoginTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LoginTest_createAndFindUser - 2021.04.20 at 12h 39m 49s.xml">
       <configuration name="LoginTest.createAndFindUser" configurationId="JUnit" />
     </history-entry>
@@ -662,6 +667,9 @@
     </history-entry>
     <history-entry file="LoginTest_createAndFindUser - 2021.04.23 at 19h 15m 54s.xml">
       <configuration name="LoginTest.createAndFindUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LoginTest - 2021.04.23 at 19h 22m 22s.xml">
+      <configuration name="LoginTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -785,7 +793,8 @@
     <MESSAGE value="Added more functionality" />
     <MESSAGE value="Create account is now functional" />
     <MESSAGE value="Search bar works but database connection does not" />
-    <option name="LAST_COMMIT_MESSAGE" value="Search bar works but database connection does not" />
+    <MESSAGE value="Fixed database error" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed database error" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -920,13 +929,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/UserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Account Functionality">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -942,24 +944,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-          <folding>
-            <element signature="e#1769#1770#0" expanded="true" />
-            <element signature="e#1789#1790#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/LoginTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Login.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -985,19 +969,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/HomePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1925">
-          <caret line="125" column="13" lean-forward="true" selection-start-line="125" selection-start-column="13" selection-end-line="125" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#371#398#0" expanded="true" />
-            <element signature="e#6201#6202#0" expanded="true" />
-            <element signature="e#6238#6239#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1033">
@@ -1009,6 +980,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/UserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/LoginTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding>
+            <element signature="e#1769#1770#0" expanded="true" />
+            <element signature="e#1789#1790#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/HomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="89" column="39" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#371#398#0" expanded="true" />
+            <element signature="e#3849#3850#0" expanded="true" />
+            <element signature="e#3889#3890#0" expanded="true" />
+            <element signature="e#6352#6353#0" expanded="true" />
+            <element signature="e#6389#6390#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
