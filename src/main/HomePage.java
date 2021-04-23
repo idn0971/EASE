@@ -27,6 +27,7 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
 	static JFrame f;
 	static JMenuBar bar;
 	static JMenuItem searchin, pop;
+	JTextField text;
 
 	public HomePage() {
 		// TODO Auto-generated method stub
@@ -46,13 +47,15 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
 				f.setJMenuBar(bar);
 
 				//Search Bar
-				JPanel search1 =  new JPanel();
-				search1.setLayout(new GridLayout(1,2));
+				JPanel search =  new JPanel();
+				search.setLayout(new GridLayout(1,2));
 				JLabel dummyBar = new JLabel("Search:");
-				JTextField text = new JTextField("What would you like to find?", 50);
-				search1.add(dummyBar);
-				search1.add(text);
-				frame.add(search1, BorderLayout.NORTH);
+				text = new JTextField("What would you like to find?", 50);
+				search.add(dummyBar);
+				search.add(text);
+				frame.add(search, BorderLayout.NORTH);
+
+
 
 				filter = new JComboBox(filters);
 				filter.addItemListener(this);
@@ -60,6 +63,8 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
 				JButton submit = new JButton("Search");
 				button.add(submit);
 				button.add(filter);
+				submit.addActionListener(this);
+
 
 				frame.add(button, BorderLayout.CENTER);
 
@@ -191,11 +196,8 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getActionCommand().equals("Search")) {
-			JTextField bar = new JTextField("What would you like to find?", 50);
-			bar.addActionListener(this);
-			String usrInput = bar.getText();
-			ArrayList<Application> searchResults = new ArrayList<>();
-			searchResults = searchVerifiedApps(usrInput); // figure out how access the user input
+			String usrInput = text.getText();
+			ArrayList<Application> searchResults = searchVerifiedApps(usrInput); // figure out how access the user input
 			for (Application s : searchResults) {
 				JTextArea searchBox = new JTextArea(10, 30);
 				searchBox.append(s.toString() + "\n");
