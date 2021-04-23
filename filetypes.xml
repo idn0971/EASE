@@ -1,6 +1,7 @@
 <application>
   <component name="FileTypeManager" version="17">
     <extensionMap>
+      <mapping pattern="Account Functionality" type="CLASS" />
       <mapping pattern="RoadNetwork" type="JAVA" />
     </extensionMap>
   </component>
