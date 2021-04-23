@@ -1,0 +1,31 @@
+<?eclipse.ant.import?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="run" name="EASE 1">
+    <property environment="env"/>
+
+    <target name="init">
+        <mkdir dir="bin"/>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    	<delete dir="dist"/>
+    </target>
+    <target name="compile" depends="init">  
+    	<javac srcdir="src/main" destdir="bin" includeantruntime="true"/>
+    </target>
+    <target name="jar" depends="compile">
+    	<mkdir dir="jar"/>    	
+    	<jar destfile="jar/EASE.jar" basedir="bin">
+    		<manifest>
+                <attribute name="Main-Class" value="HomePage"/>
+            </manifest>
+        </jar>
+    </target>
+	<target name="run" depends="jar">
+	    <java jar="jar/EASE.jar" fork="true"/>
+	</target>
+</project>
