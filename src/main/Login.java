@@ -73,16 +73,16 @@ public class Login {
 
     public  User findUser(String userName, String password) {
         User user = new User();
-        String sql = "SELECT * "
+        String sql = "SELECT userName, password "
                 + "FROM Login WHERE userName = ? AND password = ?";
 
         try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, userName);
             pstmt.setString(2, password);
-             ResultSet rs    = pstmt.executeQuery(sql);
+             ResultSet rs    = pstmt.executeQuery();
              user.setUserName(rs.getString("userName"));
-             user.setPassword("password");
+             user.setPassword(rs.getString("password"));
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }

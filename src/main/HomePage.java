@@ -145,7 +145,7 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
         try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, keyword);
-            ResultSet rs    = pstmt.executeQuery(sql);
+            ResultSet rs    = pstmt.executeQuery();
             while (rs.next()) {
                 boolean verified = false;
                 if (rs.getInt("isVerified") == 1) {
