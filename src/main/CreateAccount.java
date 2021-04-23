@@ -7,6 +7,10 @@ import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.Arrays;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -90,13 +94,34 @@ public class CreateAccount implements ActionListener {
                 confirm.getPassword()))) {
             warning.setText("Your passwords incorrect");
         } else {
-            try {
-                BufferedWriter writer = new BufferedWriter(new FileWriter("nuserInfo.txt"));
-                writer.write(username.getText() + "/" + new String(password.getPassword()));
-                writer.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+
+                createUser(username.getText(), new String (password.getPassword()));
+
         }
+    }
+
+    public void createUser(String userName, String password) {
+        String sql = "INSERT INTO Login(userName, password) VALUES(?,?)";
+
+        try (Connection conn = connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, userName);
+            pstmt.setString(2, password);
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    private static Connection connect() {
+        // SQLite connection string
+        String url = "jdbc:sqlite:sqlite/EASE.db";
+        Connection conn = null;
+        try {
+            conn = DriverManager.getConnection(url);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return conn;
     }
 }
