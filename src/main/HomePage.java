@@ -39,6 +39,7 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
 				menu = new JMenu("Menu");
 				searchin = new JMenuItem("Search Page");
 				pop = new JMenuItem("Login Page");
+				f = new JFrame();
 				menu.add(searchin);
 				menu.add(pop);
 				bar.add(menu);
@@ -53,6 +54,8 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
 				search1.add(text);
 				frame.add(search1, BorderLayout.NORTH);
 
+				filter = new JComboBox(filters);
+				filter.addItemListener(this);
 				JPanel button = new JPanel();
 				JButton submit = new JButton("Search");
 				button.add(submit);
