@@ -48,30 +48,36 @@ public class AddApp extends JFrame implements ActionListener {
 		JLabel comp = new JLabel("What company is adding this?");
 		JLabel link = new JLabel("Link to application");
 		JLabel price = new JLabel("Price of application");
-		c.add(name);
-		c.add(date);
-		c.add(user);
-		c.add(des);
-		c.add(comp);
-		c.add(link);
-		c.add(price);
+		
 		
 		//textfields and adding
 		JTextField name1 = new JTextField("Name", 100);
-		c.add(name1);
-		JTextField date1 = new JTextField("Date", 10);
-		c.add(date1);
-		JTextField user1 = new JTextField("Username", 50);
-		c.add(user1);
-		JTextField des1 = new JTextField("Description", 200);
-		c.add(des1);
-		JTextField comp1 = new JTextField("Company", 50);
-		c.add(comp1);
-		JTextField link1 = new JTextField("Link", 100);
-		c.add(link1);
-		JTextField price1 = new JTextField("Price", 50);
-		c.add(price1);
 		
+		JTextField date1 = new JTextField("Date", 10);
+		
+		JTextField user1 = new JTextField("Username", 50);
+		
+		JTextField des1 = new JTextField("Description", 200);
+		
+		JTextField comp1 = new JTextField("Company", 50);
+		
+		JTextField link1 = new JTextField("Link", 100);
+		
+		JTextField price1 = new JTextField("Price", 50);
+		c.add(name);
+		c.add(name1);
+		c.add(date);
+		c.add(date1);
+		c.add(user);
+		c.add(user1);
+		c.add(des);
+		c.add(des1);
+		c.add(comp);
+		c.add(comp1);
+		c.add(link);
+		c.add(link1);
+		c.add(price);
+		c.add(price1);
 		frame.add(c, BorderLayout.CENTER);
 		frame.setVisible(true);
 	}
