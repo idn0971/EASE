@@ -10,7 +10,7 @@
 public class User {
 	// instance variables
 	private String firstName, lastName, userName, password;
-	private boolean isAdmin, access, verify;
+	private boolean isAdmin, access;
 
 	// Assigns instance variables to null and isAdmin to false.
 	User() {
@@ -42,7 +42,7 @@ public class User {
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-	
+
 	public String getFirstName() {
 		return firstName;
 	}
@@ -50,7 +50,7 @@ public class User {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	
+
 	public String getLastName() {
 		return lastName;
 	}
@@ -58,7 +58,7 @@ public class User {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-	
+
 	public String getUserName() {
 		return userName;
 	}
@@ -66,7 +66,7 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
 	public String getPassword() {
 		return password;
 	}
@@ -74,40 +74,29 @@ public class User {
 	public void setAdmin(boolean isAdmin) {
 		this.isAdmin = isAdmin;
 	}
-	
+
 	public boolean getIsAdmin() {
 		return isAdmin;
 	}
-	
+
 	public void setAccess(boolean access) {
 		this.access = access;
 	}
-	
+
 	public boolean getAccess() {
 		return access;
 	}
-	/**
-	 * this may get moved to an admin class
-	 * @param verify
-	 */
-	public void setVerify(boolean verify) {
-		this.verify = verify;
-	}
-	
-	public boolean getVerify() {
-		return verify;
-	}
-	
+
 	// checks if its a user or admin. if admin then has access to request page
 
 	private void adminAccess() {
 		if (this.isAdmin == true) {
 			this.access = true;
 			// --- send to request page ---
-			Admin ad = new Admin();
+			Admin ad = new Admin();	
 		} else {
 			// --- send user to waiting page ---
-			// Wait wait = new Wait();
+		 Wait wait = new Wait();
 		}
 	}
 }
