@@ -4,13 +4,13 @@ import java.util.Map;
 public class Application {
 
 	// instance variables
-	private String name, userAdded, dateAdded, description, organization, link;
+	private String name, userAdded, dateAdded, description, organization, link, category;
 	private double price, rating;
 	private boolean isVerified;
 	private Map<String, List<String>> platformNversion;
 	
 	public Application(String name, String userAdded, String dateAdded, String description, 
-			String organization, String link, double price, double rating, 
+			String organization, String link, String category, double price, double rating, 
 			boolean isVerified, Map<String, List<String>> platformNversion) {
 		setName(name);
 		setUserAdded(userAdded);
@@ -18,6 +18,7 @@ public class Application {
 		setDescription(description);
 		setOrganization(organization);
 		setLink(link);
+		setCategory(category);
 		setPrice(price);
 		setRating(rating);
 		setVerified(isVerified);
@@ -30,6 +31,7 @@ public class Application {
 		this.description = null;
 		this.organization = null;
 		this.link = null;
+		this.category = null;
 		this.price = 0;
 		this.rating = 0;
 		this.isVerified = false;
@@ -81,6 +83,14 @@ public class Application {
 	
 	public void setLink(String link) {
 		this.link = link;
+	}
+	
+	public String getCategory() {
+		return category;
+	}
+	
+	public void setCategory(String category) {
+		this.category = category;
 	}
 	
 	public double getPrice() {
