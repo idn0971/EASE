@@ -21,7 +21,7 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
 	static JComboBox filter;
 	private JButton submit;
 	private String filters[]
-			= { "Select One", "Rating", "KeyWord", "Category"};
+			= { "Select One", "Rating", "Keyword", "Category"};
 
 	static JMenu menu;
 	static JFrame f;
@@ -127,7 +127,7 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
 				Application app = new Application(rs.getString("name"), rs.getString("userAdded"),
 						rs.getString("dateAdded"), rs.getString("description"),
 						rs.getString("organization"), rs.getString("link"),
-						rs.getDouble("price"),
+						rs.getString("category"), rs.getDouble("price"),
 						rs.getDouble("rating"), verified , null);
 				apps.add(app);
 			}
@@ -161,7 +161,33 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
                 Application app = new Application(rs.getString("name"), rs.getString("userAdded"),
                         rs.getString("dateAdded"), rs.getString("description"),
                         rs.getString("organization"), rs.getString("link"),
-                        rs.getDouble("price"),
+                        rs.getString("category"), rs.getDouble("price"),
+                        rs.getDouble("rating"), verified, null);
+                searchResult.add(app);
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return searchResult;
+	}
+
+	private static ArrayList<Application> searchByCategory(String category) {
+        ArrayList<Application> searchResult = new ArrayList<>();
+        String sql = "SELECT * FROM Application WHERE isVerified = 1 AND category LIKE ?";
+
+        try (Connection conn = connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, category);
+            ResultSet rs    = pstmt.executeQuery();
+            while (rs.next()) {
+                boolean verified = false;
+                if (rs.getInt("isVerified") == 1) {
+                    verified = true;
+                }
+                Application app = new Application(rs.getString("name"), rs.getString("userAdded"),
+                        rs.getString("dateAdded"), rs.getString("description"),
+                        rs.getString("organization"), rs.getString("link"),
+                        rs.getString("category"), rs.getDouble("price"),
                         rs.getDouble("rating"), verified, null);
                 searchResult.add(app);
             }
@@ -204,12 +230,20 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if (e.getActionCommand().equals("Search")) {
 			String usrInput = text.getText();
-			ArrayList<Application> searchResults = searchVerifiedApps(usrInput); // figure out how access the user input
+			ArrayList<Application> searchResults = new ArrayList<>(); // figure out how access the user input
+		    if (filter.getSelectedItem() == "Category") {
+				searchResults = searchByCategory(usrInput); 
+			} else if (filter.getSelectedItem() == "Rating"){
+				
+			} else {
+				searchResults = searchVerifiedApps(usrInput); 
+			}
 			for (Application s : searchResults) {
 				JTextArea searchBox = new JTextArea(10, 30);
 				searchBox.append(s.toString() + "\n");
 			}
 		}
+		
 	}
 
 
