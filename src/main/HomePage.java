@@ -26,7 +26,7 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
 	static JMenu menu;
 	static JFrame f;
 	static JMenuBar bar;
-	static JMenuItem searchin, pop;
+	static JMenuItem searchin, pop, add;
 	JTextField text;
 
 	public HomePage() {
@@ -40,11 +40,12 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
 				menu = new JMenu("Menu");
 				searchin = new JMenuItem("Search Page");
 				pop = new JMenuItem("Login Page");
-				f = new JFrame();
+				add = new JMenuItem("Add an App");
 				menu.add(searchin);
 				menu.add(pop);
+				menu.add(add);
 				bar.add(menu);
-				f.setJMenuBar(bar);
+				frame.setJMenuBar(bar);
 
 				//Search Bar
 				JPanel search =  new JPanel();
