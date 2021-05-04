@@ -28,6 +28,8 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
 	static JMenuBar bar;
 	static JMenuItem searchin, pop, add;
 	JTextField text;
+	Login log;
+	AddApp app;
 
 	public HomePage() {
 		// TODO Auto-generated method stub
@@ -39,8 +41,11 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
 				bar = new JMenuBar();
 				menu = new JMenu("Menu");
 				searchin = new JMenuItem("Search Page");
+				searchin.addActionListener(this);
 				pop = new JMenuItem("Login Page");
+				pop.addActionListener(this);
 				add = new JMenuItem("Add an App");
+				add.addActionListener(this);
 				menu.add(searchin);
 				menu.add(pop);
 				menu.add(add);
@@ -243,6 +248,10 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
 				JTextArea searchBox = new JTextArea(10, 30);
 				searchBox.append(s.toString() + "\n");
 			}
+		} else if (e.getActionCommand().equals("Login Page")) {
+			log = new Login();
+		} else if (e.getActionCommand().equals("Add an App")) {
+			app = new AddApp();
 		}
 		
 	}
