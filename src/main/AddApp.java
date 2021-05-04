@@ -51,6 +51,7 @@ public class AddApp extends JFrame implements ActionListener {
 		JLabel des = new JLabel("Description");
 		JLabel comp = new JLabel("What company is adding this?");
 		JLabel link = new JLabel("Link to application");
+		JLabel category = new JLabel("Category of Application");
 		JLabel price = new JLabel("Price of application");
 		
 		
@@ -66,6 +67,8 @@ public class AddApp extends JFrame implements ActionListener {
 		JTextField comp1 = new JTextField("Company", 50);
 		
 		JTextField link1 = new JTextField("Link", 100);
+
+		JTextField category1 = new JTextField("Category", 50);
 		
 		JTextField price1 = new JTextField("Price", 50);
 		c.add(name);
@@ -80,6 +83,8 @@ public class AddApp extends JFrame implements ActionListener {
 		c.add(comp1);
 		c.add(link);
 		c.add(link1);
+		c.add(category);
+		c.add(category1);
 		c.add(price);
 		c.add(price1);
 		 JPanel button = new JPanel();
@@ -92,6 +97,10 @@ public class AddApp extends JFrame implements ActionListener {
 	}
 	
 	public void actionPerformed(ActionEvent e) {
+		if (e.getActionCommand().equals("Submit")) {
+			//componen
+			//createAccount(c.getComponents());
+		}
 		
 	}
 
