@@ -95,13 +95,21 @@ public class AddApp extends JFrame implements ActionListener {
 		
 	}
 
-	public void createUser(String userName, String password) {
-		String sql = "INSERT INTO Application(userName, password) VALUES(?,?)";
+	public void createAccount(String appName, String userName, String date, String description, String organization,
+							  String link, String category, double price) {
+		String sql = "INSERT INTO Application(name, userAdded, dateAdded, description, organization, link, category," +
+				" price) VALUES(?,?,?,?,?,?,?,?)";
 
 		try (Connection conn = connect();
 			 PreparedStatement pstmt = conn.prepareStatement(sql)) {
-			pstmt.setString(1, userName);
-			pstmt.setString(2, password);
+			pstmt.setString(1, appName);
+			pstmt.setString(2, userName);
+			pstmt.setString(3, date);
+			pstmt.setString(4, description);
+			pstmt.setString(5, organization);
+			pstmt.setString(6, link);
+			pstmt.setString(7, category);
+			pstmt.setDouble(8, price);
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
