@@ -49,7 +49,7 @@ class UserTest {
     @Test
     void setAndGetVerify() {
         User usr = new User();
-        usr.setVerify(true);
-        assertEquals(true, usr.getVerify());
+        usr.setAccess(true);
+        assertEquals(true, usr.getAccess());
     }
 }

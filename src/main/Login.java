@@ -65,7 +65,8 @@ public class Login implements ActionListener{
 	
 	public void actionPerformed(ActionEvent e) {
 		if (e.getActionCommand().equals("Create user")) {
-			acc = new CreateAccount();
+			CreateAccount acc = new CreateAccount();
+			acc.go();
 		}
 	}
 

@@ -26,6 +26,7 @@ CREATE TABLE AddApp (
   description TEXT NOT NULL,
   organization TEXT NOT NULL,
   link TEXT NOT NULL,
+  category TEXT NOT NULL,
   isVerified INTEGER NOT NULL,
   price DOUBLE NOT NULL,
   rating DOUBLE NOT NULL
@@ -47,7 +48,7 @@ CREATE TABLE AddApp (
   CREATE TABLE Login (
   firstName TEXT NOT NULL,
   lastName TEXT NOT NULL,
-  userName TEXT NOT NULL,
+  userName TEXT NOT NULL UNIQUE,
   password TEXT NOT NULL
   );
   
