@@ -22,7 +22,7 @@ public class AddApp extends JFrame implements ActionListener {
 	}
 	// Components
 	private Container c;
-	
+	static JButton sub;
 	
 	/*
 	 * Creates Frame and labels to add an application and request to admin
@@ -78,6 +78,11 @@ public class AddApp extends JFrame implements ActionListener {
 		c.add(link1);
 		c.add(price);
 		c.add(price1);
+		 JPanel button = new JPanel();
+		 sub = new JButton("Submit");
+		 sub.addActionListener(this);
+		 button.add(sub);
+		 frame .add(button, BorderLayout.SOUTH);
 		frame.add(c, BorderLayout.CENTER);
 		frame.setVisible(true);
 	}
