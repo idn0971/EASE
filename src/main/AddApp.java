@@ -4,6 +4,10 @@ import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.*;
 import java.awt.event.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 import javax.swing.*;
 import javax.swing.JButton;
@@ -84,6 +88,31 @@ public class AddApp extends JFrame implements ActionListener {
 	
 	public void actionPerformed(ActionEvent e) {
 		
+	}
+
+	public void createUser(String userName, String password) {
+		String sql = "INSERT INTO Application(userName, password) VALUES(?,?)";
+
+		try (Connection conn = connect();
+			 PreparedStatement pstmt = conn.prepareStatement(sql)) {
+			pstmt.setString(1, userName);
+			pstmt.setString(2, password);
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+	private static Connection connect() {
+		// SQLite connection string
+		String url = "jdbc:sqlite:sqlite/EASE.db";
+		Connection conn = null;
+		try {
+			conn = DriverManager.getConnection(url);
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
+		return conn;
 	}
 
 }
