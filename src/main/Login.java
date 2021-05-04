@@ -1,5 +1,7 @@
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -12,10 +14,11 @@ import javax.swing.JTextField;
 import javax.swing.WindowConstants;
 import javax.swing.border.TitledBorder;
 
-public class Login {
+public class Login implements ActionListener{
 	/*
 	 * Generates Login popup for the user or admin to log in
 	 */
+	CreateAccount acc;
 	public Login() {
 		// TODO Auto-generated method stub
 				JFrame frame = new JFrame("Welcome");
@@ -44,7 +47,9 @@ public class Login {
 				//Button Panel
 				JPanel buttons = new JPanel();
 				JButton sign = new JButton("Sign in");
+				sign.addActionListener(this);
 				JButton create = new JButton("Create user");
+				create.addActionListener(this);
 				buttons.add(sign);
 				buttons.add(create);
 				
@@ -56,6 +61,12 @@ public class Login {
 				//Some Frame setup
 				frame.setVisible(true);
 				frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+		if (e.getActionCommand().equals("Create user")) {
+			acc = new CreateAccount();
+		}
 	}
 
     public void createUser(String userName, String password) {
