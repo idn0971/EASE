@@ -37,7 +37,7 @@ public class AddApp extends JFrame implements ActionListener {
 		frame.setLayout(new BorderLayout());
 		frame.setSize(400, 240);
 		frame.setVisible(true);
-		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 		
 		//main container to house everything
 		c = getContentPane();

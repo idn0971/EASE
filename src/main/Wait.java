@@ -20,7 +20,7 @@ public class Wait {
 		frame.setLayout(new BorderLayout());
 		frame.setSize(400, 240);
 		frame.setVisible(true);
-		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 		
 		JLabel message = new JLabel("Please wait while the admin processes your request.");
 		frame.add(message, BorderLayout.CENTER);

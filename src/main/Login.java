@@ -19,6 +19,7 @@ public class Login implements ActionListener{
 	 * Generates Login popup for the user or admin to log in
 	 */
 	CreateAccount acc;
+	JTextField username, password;
 	public Login() {
 		// TODO Auto-generated method stub
 				JFrame frame = new JFrame("Welcome");
@@ -31,11 +32,11 @@ public class Login implements ActionListener{
 				panel.setLayout(new GridLayout(2,2));
 				JLabel user = new JLabel("Username");
 				panel.add(user);
-				JTextField username = new JTextField("Enter Username", 50);
+				username = new JTextField("Enter Username", 50);
 				panel.add(username);
 				JLabel pass = new JLabel("Password");
 				panel.add(pass);
-				JTextField password = new JTextField("Enter Password", 10);
+				password = new JTextField("Enter Password", 10);
 				panel.add(password);
 				
 				//Company Name
@@ -60,13 +61,15 @@ public class Login implements ActionListener{
 				
 				//Some Frame setup
 				frame.setVisible(true);
-				frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+				frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 	}
 	
 	public void actionPerformed(ActionEvent e) {
 		if (e.getActionCommand().equals("Create user")) {
 			CreateAccount acc = new CreateAccount();
 			acc.go();
+		}else if (e.getActionCommand().equals("Sign in")) {
+			findUser(username.getText(), password.getText());
 		}
 	}
 
