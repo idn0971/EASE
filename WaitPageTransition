@@ -1,0 +1,7 @@
+public void actionPerformed(ActionEvent e) {
+		if (e.getActionCommand().equals("Submit")) {
+			createAccount(name1.getText(), user1.getText(), date1.getText(), des1.getText(), comp1.getText(),
+					link1.getText(), category1.getText(), Double.parseDouble(price1.getText()));
+		}
+		wait.show();
+	}
