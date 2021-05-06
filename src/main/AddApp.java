@@ -27,6 +27,22 @@ public class AddApp extends JFrame implements ActionListener {
 	// Components
 	private Container c;
 	static JButton sub;
+
+	JTextField name1 = new JTextField("Name", 100);
+
+	JTextField date1 = new JTextField("Date", 10);
+
+	JTextField user1 = new JTextField("Username", 50);
+
+	JTextField des1 = new JTextField("Description", 200);
+
+	JTextField comp1 = new JTextField("Company", 50);
+
+	JTextField link1 = new JTextField("Link", 100);
+
+	JTextField category1 = new JTextField("Category", 50);
+
+	JTextField price1 = new JTextField("Price", 50);
 	
 	/*
 	 * Creates Frame and labels to add an application and request to admin
@@ -56,21 +72,7 @@ public class AddApp extends JFrame implements ActionListener {
 		
 		
 		//textfields and adding
-		JTextField name1 = new JTextField("Name", 100);
-		
-		JTextField date1 = new JTextField("Date", 10);
-		
-		JTextField user1 = new JTextField("Username", 50);
-		
-		JTextField des1 = new JTextField("Description", 200);
-		
-		JTextField comp1 = new JTextField("Company", 50);
-		
-		JTextField link1 = new JTextField("Link", 100);
 
-		JTextField category1 = new JTextField("Category", 50);
-		
-		JTextField price1 = new JTextField("Price", 50);
 		c.add(name);
 		c.add(name1);
 		c.add(date);
@@ -98,8 +100,8 @@ public class AddApp extends JFrame implements ActionListener {
 	
 	public void actionPerformed(ActionEvent e) {
 		if (e.getActionCommand().equals("Submit")) {
-			//componen
-			//createAccount(c.getComponents());
+			createAccount(name1.getText(), user1.getText(), date1.getText(), des1.getText(), comp1.getText(),
+					link1.getText(), category1.getText(), Double.parseDouble(price1.getText()));
 		}
 		
 	}
@@ -107,7 +109,7 @@ public class AddApp extends JFrame implements ActionListener {
 	public void createAccount(String appName, String userName, String date, String description, String organization,
 							  String link, String category, double price) {
 		String sql = "INSERT INTO Application(name, userAdded, dateAdded, description, organization, link, category," +
-				" price) VALUES(?,?,?,?,?,?,?,?)";
+				" price, isVerified) VALUES(?,?,?,?,?,?,?,?,0)";
 
 		try (Connection conn = connect();
 			 PreparedStatement pstmt = conn.prepareStatement(sql)) {
