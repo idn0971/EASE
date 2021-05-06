@@ -5,12 +5,12 @@ public class Application {
 
 	// instance variables
 	private String name, userAdded, dateAdded, description, organization, link, category;
-	private double price, rating;
+	private double price;
 	private boolean isVerified;
 	private Map<String, List<String>> platformNversion;
 	
 	public Application(String name, String userAdded, String dateAdded, String description, 
-			String organization, String link, String category, double price, double rating, 
+			String organization, String link, String category, double price,
 			boolean isVerified, Map<String, List<String>> platformNversion) {
 		setName(name);
 		setUserAdded(userAdded);
@@ -20,7 +20,7 @@ public class Application {
 		setLink(link);
 		setCategory(category);
 		setPrice(price);
-		setRating(rating);
+
 		setVerified(isVerified);
 		setPlatformNversion(platformNversion);
 	}
@@ -33,7 +33,7 @@ public class Application {
 		this.link = null;
 		this.category = null;
 		this.price = 0;
-		this.rating = 0;
+
 		this.isVerified = false;
 	}
 	
@@ -102,14 +102,7 @@ public class Application {
 		this.price = price;
 	}
 	
-	public double getRating() {
-		return rating;
-	}
-	
-	public void setRating(double rating) {
-		if (rating < 0) throw new IllegalArgumentException("Rating cannot be negative");
-		this.rating = rating;
-	}
+
 	
 	public boolean isVerified() {
 		return isVerified;

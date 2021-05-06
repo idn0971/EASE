@@ -61,12 +61,7 @@ class ApplicationTest {
         assertEquals(1.11, app.getPrice() );
     }
 
-    @Test
-    void getAndSetRating() {
-        Application app = new Application();
-        app.setRating(3.0);
-        assertEquals(3.0,app.getRating() );
-    }
+
 
     @Test
     void isAndSetVerified() {

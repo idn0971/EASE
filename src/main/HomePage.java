@@ -87,15 +87,17 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
 				applications.add(size);
 				applications.add(user);
 				applications.add(date);
+				verifiedApps = loadVerifiedApps();
                 JList<String> displayList = new JList<>(verifiedApps.toArray(new String[0]));
                 JScrollPane scrollPane = new JScrollPane(displayList);
                 //Lexi Please fix the layout for the scroll frame and figure out how to update it
-                //frame.add(scrollPane);
+				frame.add(applications, BorderLayout.SOUTH);
+                frame.add(scrollPane);
 
 
 
 
-        frame.add(applications, BorderLayout.SOUTH);
+
 
 
 
@@ -134,7 +136,7 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
 						rs.getString("dateAdded"), rs.getString("description"),
 						rs.getString("organization"), rs.getString("link"),
 						rs.getString("category"), rs.getDouble("price"),
-						rs.getDouble("rating"), verified , null);
+						verified , null);
 				apps.add(app);
 			}
 		} catch (SQLException e) {
@@ -148,6 +150,23 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
 	public static void recallVerified() {
 		verifiedApps = loadVerifiedApps();
 	}
+
+	public static void updateVerified(String appName) {
+		String sql = "UPDATE Application SET isVerified = 1 , "
+				+ "WHERE name = ?";
+
+		try (Connection conn = connect();
+			 PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+			// set the corresponding param
+			pstmt.setString(1, appName);
+			// update
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
 
 	// place holder for this method
 	private static ArrayList<Application> searchVerifiedApps(String keyword) {
@@ -168,7 +187,7 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
                         rs.getString("dateAdded"), rs.getString("description"),
                         rs.getString("organization"), rs.getString("link"),
                         rs.getString("category"), rs.getDouble("price"),
-                        rs.getDouble("rating"), verified, null);
+                         verified, null);
                 searchResult.add(app);
             }
         } catch (SQLException e) {
@@ -194,7 +213,7 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
                         rs.getString("dateAdded"), rs.getString("description"),
                         rs.getString("organization"), rs.getString("link"),
                         rs.getString("category"), rs.getDouble("price"),
-                        rs.getDouble("rating"), verified, null);
+                         verified, null);
                 searchResult.add(app);
             }
         } catch (SQLException e) {
