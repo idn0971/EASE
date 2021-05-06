@@ -52,7 +52,7 @@ public class CreateAccount implements ActionListener {
         panel.setBackground(Color.ORANGE);
 
         frame = new JFrame("Create a new account");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.getContentPane().add(BorderLayout.CENTER, panel);
 
         JLabel userLabel = new JLabel("Username:");

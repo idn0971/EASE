@@ -79,6 +79,6 @@ class ApplicationTest {
         test.put("test", testList);
         app.setPlatformNversion(test);
         assertEquals(test,app.getPlatformNversion() );
-    }
+        }
 
-}
+        }
