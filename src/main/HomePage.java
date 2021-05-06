@@ -87,7 +87,7 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
 				applications.add(size);
 				applications.add(user);
 				applications.add(date);
-				verifiedApps = loadVerifiedApps();
+				//verifiedApps = loadVerifiedApps();
                 //JList<String> displayList = new JList<>(verifiedApps.toArray(new String[0]));
                 //JScrollPane scrollPane = new JScrollPane(displayList);
                 //Lexi Please fix the layout for the scroll frame and figure out how to update it
