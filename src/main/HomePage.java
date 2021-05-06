@@ -88,11 +88,11 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
 				applications.add(user);
 				applications.add(date);
 				verifiedApps = loadVerifiedApps();
-                JList<String> displayList = new JList<>(verifiedApps.toArray(new String[0]));
-                JScrollPane scrollPane = new JScrollPane(displayList);
+                //JList<String> displayList = new JList<>(verifiedApps.toArray(new String[0]));
+                //JScrollPane scrollPane = new JScrollPane(displayList);
                 //Lexi Please fix the layout for the scroll frame and figure out how to update it
 				frame.add(applications, BorderLayout.SOUTH);
-                frame.add(scrollPane);
+                //frame.add(scrollPane);
 
 
 
@@ -120,7 +120,7 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
 	private static ArrayList<Application> loadVerifiedApps() {
 		ArrayList <Application> apps = new ArrayList<>();
 		String sql = "SELECT * "
-				+ "FROM Application WHERE verified = 1";
+				+ "FROM Application WHERE isVerified = 1";
 
 		try (Connection conn = connect();
 			 Statement stmt  = conn.createStatement();

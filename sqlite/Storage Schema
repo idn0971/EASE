@@ -28,8 +28,7 @@ CREATE TABLE AddApp (
   link TEXT NOT NULL,
   category TEXT NOT NULL,
   isVerified INTEGER NOT NULL,
-  price DOUBLE NOT NULL,
-  rating DOUBLE NOT NULL
+  price DOUBLE NOT NULL
   );
   
   CREATE TABLE HomePage (
