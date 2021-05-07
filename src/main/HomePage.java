@@ -76,20 +76,35 @@ public class HomePage extends JPanel implements ItemListener, ActionListener {
 
 				JPanel applications = new JPanel();
 				applications.setBorder(new TitledBorder("Applications Preview"));
-				applications.setLayout(new GridLayout(1,5));
-				JLabel app = new JLabel ("App Name");
-				JLabel apple = new JLabel("Picture");
-				JLabel size = new JLabel("size");
-				JLabel user = new JLabel("Author");
-				JLabel date = new JLabel("Date");
-				applications.add(apple);
-				applications.add(app);
-				applications.add(size);
-				applications.add(user);
-				applications.add(date);
-				//verifiedApps = loadVerifiedApps();
-                //JList<String> displayList = new JList<>(verifiedApps.toArray(new String[0]));
-                //JScrollPane scrollPane = new JScrollPane(displayList);
+				
+//				JLabel app = new JLabel ("App Name");
+//				JLabel apple = new JLabel("Picture");
+//				JLabel size = new JLabel("size");
+//				JLabel user = new JLabel("Author");
+//				JLabel date = new JLabel("Date");
+//				applications.add(apple);
+//				applications.add(app);
+//				applications.add(size);
+//				applications.add(user);
+//				applications.add(date);
+				verifiedApps = loadVerifiedApps();
+				applications.setLayout(new GridLayout(verifiedApps.size(),6));
+				for (int i = 0; i < verifiedApps.size(); i++) {
+					JLabel name = new JLabel(verifiedApps.get(i).getName());
+					JLabel user = new JLabel(verifiedApps.get(i).getUserAdded());
+					JLabel date = new JLabel(verifiedApps.get(i).getDateAdded());
+					JLabel des = new JLabel(verifiedApps.get(i).getDescription());
+					JLabel org = new JLabel(verifiedApps.get(i).getOrganization());
+					JLabel price = new JLabel(Double.toString(verifiedApps.get(i).getPrice()));
+					applications.add(name);
+					applications.add(user);
+					applications.add(date);
+					applications.add(des);
+					applications.add(org);
+					applications.add(price);	
+				}
+                JList<String> displayList = new JList<>(verifiedApps.toArray(new String[0]));
+                JScrollPane scrollPane = new JScrollPane(displayList);
                 //Lexi Please fix the layout for the scroll frame and figure out how to update it
 				frame.add(applications, BorderLayout.SOUTH);
                 //frame.add(scrollPane);
