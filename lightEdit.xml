@@ -1,5 +1,11 @@
 <application>
   <component name="LightEdit">
+    <option name="sessionFiles">
+      <list>
+        <option value="file:///Solution (4).java" />
+        <option value="file:///Solution (4).java" />
+      </list>
+    </option>
     <option name="preferredMode" value="Project" />
   </component>
 </application>
